@@ -1,0 +1,356 @@
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+ <!-- 显示器使用的像素排列方式. 现代显示器基本都是用rgb排列. -->
+ <match target="font">
+  <edit mode="assign" name="rgba">
+   <const>rgb</const>
+  </edit>
+ </match>
+ <!-- 字体微调的程度, 可选为 hintnone, hintslight (默认), hintmedium, hintfull. -->
+ <!-- 简单来说，更高的 hinting 等级可以使字体更锐利，但同时也会损失更多的细节. -->
+ <!-- 如果你的显示器的 DPI 高得不像话 (>=300), 那么就可以关闭 hinting, 因为字体会自然对齐像素. -->
+ <match target="font">
+  <edit mode="assign" name="hintstyle">
+   <const>hintslight</const>
+  </edit>
+ </match>
+ <!-- 抗锯齿. 除非你的屏幕DPI奇高否则建议开启. -->
+ <!-- 关于lcdfilter, 因为我们在使用 FreeType2 自带的 Harmony 子像素渲染, 应该是不需要设置的. -->
+ <match target="font">
+  <edit mode="assign" name="lcdfilter">
+   <const>lcddefault</const>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="family" qual="any">
+   <string>system-ui</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <!-- 默认无衬线字体 -->
+ <!-- Default sans-serif font -->
+ <match target="pattern">
+  <test name="family" qual="any">
+   <string>sans-serif</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>Noto Sans</string>
+  </edit>
+ </match>
+ <!-- 默认衬线字体 -->
+ <!-- Default serif fonts -->
+ <match target="pattern">
+  <test name="family" qual="any">
+   <string>serif</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>Noto Serif</string>
+  </edit>
+ </match>
+ <!-- 默认等宽字体 -->
+ <!-- Default monospace fonts -->
+ <match target="pattern">
+  <test name="family" qual="any">
+   <string>monospace</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>JetBrains Mono</string>
+  </edit>
+ </match>
+ <!-- Fallback fonts preference order -->
+ <alias>
+  <family>sans-serif</family>
+  <prefer>
+   <family>Noto Sans</family>
+   <family>Noto Sans CJK SC</family>
+   <family>Noto Sans CJK HK</family>
+   <family>Noto Sans CJK TC</family>
+   <family>Noto Sans CJK JP</family>
+   <family>Noto Sans CJK KR</family>
+   <family>Noto Sans Devanagari</family>
+   <family>Noto Sans Ethiopic</family>
+   <family>Noto Sans Gujarati UI</family>
+   <family>Noto Sans Gurmukhi UI</family>
+   <family>Noto Sans Hanifi Rohningya</family>
+   <family>Noto Sans Hebrew</family>
+   <family>Noto Sans Kannada UI</family>
+   <family>Noto Sans Kayah Li</family>
+   <family>Noto Sans Khmer</family>
+   <family>Noto Sans Lao</family>
+   <family>Noto Sans Lisu</family>
+   <family>Noto Sans Malayalam UI</family>
+   <family>Noto Sans Medefaidrin</family>
+   <family>Noto Sans Meetei Mayek</family>
+   <family>Noto Sans Myanmar</family>
+   <family>Noto Sans Ol Chiki</family>
+   <family>Noto Sans Sinhala UI</family>
+   <family>Noto Sans Sundanese</family>
+   <family>Noto Sans Tai Tham</family>
+   <family>Noto Sans Tamil UI</family>
+   <family>Noto Sans Tangsa</family>
+   <family>Noto Sans Telugu UI</family>
+   <family>Noto Sans Thaana</family>
+   <family>Noto Sans Thai</family>
+   <family>Noto Sans Vithkuqi</family>
+   <family>Noto Sans Symbols</family>
+   <family>Noto Color Emoji</family>
+   <family>Noto Emoji</family>
+  </prefer>
+ </alias>
+ <alias>
+  <family>serif</family>
+  <prefer>
+   <family>Noto Serif</family>
+   <family>Noto Serif CJK SC</family>
+   <family>Noto Serif CJK HK</family>
+   <family>Noto Serif CJK TC</family>
+   <family>Noto Serif CJK JP</family>
+   <family>Noto Serif CJK KR</family>
+   <family>Noto Serif Devanagari</family>
+   <family>Noto Serif Ethiopic</family>
+   <family>Noto Serif Gujarati</family>
+   <family>Noto Serif Gurmukhi</family>
+   <family>Noto Serif Hebrew</family>
+   <family>Noto Serif Kannada</family>
+   <family>Noto Serif Khmer</family>
+   <family>Noto Serif Lao</family>
+   <family>Noto Serif Malayalam</family>
+   <family>Noto Serif Myanmar</family>
+   <family>Noto Serif Oriya</family>
+   <family>Noto Serif Sinhala</family>
+   <family>Noto Serif Tamil</family>
+   <family>Noto Serif Telugu</family>
+   <family>Noto Serif Thai</family>
+   <family>Noto Serif Tibetan</family>
+   <family>Noto Serif Toto</family>
+   <family>Noto Serif Vithkuqi</family>
+   <family>Noto Serif Yezidi</family>
+   <family>Noto Color Emoji</family>
+   <family>Noto Emoji</family>
+  </prefer>
+ </alias>
+ <alias>
+  <family>monospace</family>
+  <prefer>
+   <family>JetBrains Mono</family>
+   <family>Noto Sans</family>
+   <family>Noto Sans CJK SC</family>
+   <family>Noto Sans CJK HK</family>
+   <family>Noto Sans CJK TC</family>
+   <family>Noto Sans CJK JP</family>
+   <family>Noto Sans CJK KR</family>
+   <family>Noto Sans Devanagari</family>
+   <family>Noto Sans Ethiopic</family>
+   <family>Noto Sans Gujarati UI</family>
+   <family>Noto Sans Gurmukhi UI</family>
+   <family>Noto Sans Hanifi Rohningya</family>
+   <family>Noto Sans Hebrew</family>
+   <family>Noto Sans Kannada UI</family>
+   <family>Noto Sans Kayah Li</family>
+   <family>Noto Sans Khmer</family>
+   <family>Noto Sans Lao</family>
+   <family>Noto Sans Lisu</family>
+   <family>Noto Sans Malayalam UI</family>
+   <family>Noto Sans Medefaidrin</family>
+   <family>Noto Sans Meetei Mayek</family>
+   <family>Noto Sans Myanmar</family>
+   <family>Noto Sans Ol Chiki</family>
+   <family>Noto Sans Sinhala UI</family>
+   <family>Noto Sans Sundanese</family>
+   <family>Noto Sans Tai Tham</family>
+   <family>Noto Sans Tamil UI</family>
+   <family>Noto Sans Tangsa</family>
+   <family>Noto Sans Telugu UI</family>
+   <family>Noto Sans Thaana</family>
+   <family>Noto Sans Thai</family>
+   <family>Noto Sans Vithkuqi</family>
+   <family>Noto Sans Symbols</family>
+   <family>Noto Color Emoji</family>
+   <family>Noto Emoji</family>
+  </prefer>
+ </alias>
+ <!-- No Yahei -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Microsoft YaHei</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK SC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>雅黑</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK SC</string>
+  </edit>
+ </match>
+ <!-- No Segoe -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Segoe</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans</string>
+  </edit>
+ </match>
+ <!-- No Arial -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Arial</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans</string>
+  </edit>
+ </match>
+ <!-- No Apple -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>PingFang</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK SC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>苹方</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK SC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Pro</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Mono</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>JetBrains Mono</string>
+  </edit>
+ </match>
+ <!-- TC -->
+ <match target="pattern">
+  <test name="lang">
+   <string>zh-HK</string>
+  </test>
+  <test name="family">
+   <string>Noto Sans CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK HK</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>zh-TW</string>
+  </test>
+  <test name="family">
+   <string>Noto Sans CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK TC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>ja</string>
+  </test>
+  <test name="family">
+   <string>Noto Sans CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK JP</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>ko</string>
+  </test>
+  <test name="family">
+   <string>Noto Sans CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Sans CJK KR</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>zh-HK</string>
+  </test>
+  <test name="family">
+   <string>Noto Serif CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Serif CJK TC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>zh-TW</string>
+  </test>
+  <test name="family">
+   <string>Noto Serif CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Serif CJK TC</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>ja</string>
+  </test>
+  <test name="family">
+   <string>Noto Serif CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Serif CJK JP</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test name="lang">
+   <string>ko</string>
+  </test>
+  <test name="family">
+   <string>Noto Serif CJK SC</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>Noto Serif CJK KR</string>
+  </edit>
+ </match>
+ <!-- '/" in EN -->
+ <match target="pattern">
+  <test compare="contains" name="lang">
+   <string>en</string>
+  </test>
+  <test compare="contains" name="family">
+   <string>Noto Sans CJK</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>Noto Sans</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="lang">
+   <string>en</string>
+  </test>
+  <test compare="contains" name="family">
+   <string>Noto Serif CJK</string>
+  </test>
+  <edit binding="strong" mode="prepend" name="family">
+   <string>Noto Serif</string>
+  </edit>
+ </match>
+ <dir>~/.fonts</dir>
+</fontconfig>

@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+
+  <!-- 显示器使用的像素排列方式. 现代显示器基本都是用rgb排列. -->
+  <match target="font">
+    <edit mode="assign" name="rgba">
+      <const>rgb</const>
+    </edit>
+  </match>
+
+  <!-- 字体微调的程度, 可选为 hintnone, hintslight (默认), hintmedium, hintfull. -->
+  <!-- 简单来说，更高的 hinting 等级可以使字体更锐利，但同时也会损失更多的细节. -->
+  <!-- 如果你的显示器的 DPI 高得不像话 (>=300), 那么就可以关闭 hinting, 因为字体会自然对齐像素. -->
+  <match target="font">
+    <edit mode="assign" name="hintstyle">
+      <const>hintslight</const>
+    </edit>
+  </match>
+
+  <!-- 抗锯齿. 除非你的屏幕DPI奇高否则建议开启. -->
+  <match target="font">
+    <edit mode="assign" name="antialias">
+      <bool>true</bool>
+    </edit>
+  </match>
+  
+  <!-- 关于lcdfilter, 因为我们在使用 FreeType2 自带的 Harmony 子像素渲染, 应该是不需要设置的. -->
+  <match target="font">
+    <edit name="lcdfilter" mode="assign">
+      <const>lcddefault</const>
+    </edit>
+  </match>
+  
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>system-ui</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>sans-serif</string>
+    </edit>
+  </match>
+
+  <!-- 默认无衬线字体 -->
+  <!-- Default sans-serif font -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>sans-serif</string></test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Inter</string>
+    </edit>
+  </match>
+
+  <!-- 默认衬线字体 -->
+  <!-- Default serif fonts -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>STIX Two Text</string>
+    </edit>
+  </match>
+
+  <!-- 默认等宽字体 -->
+  <!-- Default monospace fonts -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>monospace</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>JetBrains Mono</string>
+    </edit>
+  </match>
+  
+    <!-- Fallback fonts preference order -->
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Inter</family>
+      <family>Noto Sans CJK SC</family>
+      <family>Noto Sans CJK TC</family>
+      <family>Noto Sans CJK JP</family>
+      <family>Noto Sans CJK KR</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>STIX Two Text</family>
+      <family>Noto Serif CJK SC</family>
+      <family>Noto Serif CJK TC</family>
+      <family>Noto Serif CJK JP</family>
+      <family>Noto Serif CJK KR</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>JetBrains Mono</family>
+      <family>Noto Sans CJK SC</family>
+      <family>Noto Sans CJK TC</family>
+      <family>Noto Sans CJK JP</family>
+      <family>Noto Sans CJK KR</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+
+  <!-- No Yahei -->
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>Microsoft YaHei</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Inter</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>雅黑</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Inter</string>
+    </edit>
+  </match>
+
+  <!-- No Segoe -->
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>Segoe</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Inter</string>
+    </edit>
+  </match>
+
+  <!-- TC -->
+  <match target="pattern">
+    <test name="lang">
+      <string>zh-HK</string>
+    </test>
+    <test name="family">
+      <string>Noto Sans CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Sans CJK TC</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>zh-TW</string>
+    </test>
+    <test name="family">
+      <string>Noto Sans CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Sans CJK TC</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>ja</string>
+    </test>
+    <test name="family">
+      <string>Noto Sans CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Sans CJK JP</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>ko</string>
+    </test>
+    <test name="family">
+      <string>Noto Sans CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Sans CJK KR</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>zh-HK</string>
+    </test>
+    <test name="family">
+      <string>Noto Serif CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Serif CJK TC</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>zh-TW</string>
+    </test>
+    <test name="family">
+      <string>Noto Serif CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Serif CJK TC</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>ja</string>
+    </test>
+    <test name="family">
+      <string>Noto Serif CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Serif CJK JP</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang">
+      <string>ko</string>
+    </test>
+    <test name="family">
+      <string>Noto Serif CJK SC</string>
+    </test>
+    <edit name="family" binding="strong">
+      <string>Noto Serif CJK KR</string>
+    </edit>
+  </match>
+
+  <!-- '/" in EN -->
+  <match target="pattern">
+    <test name="lang" compare="contains">
+      <string>en</string>
+    </test>
+    <test name="family" compare="contains">
+      <string>Noto Sans CJK</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>Inter</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="lang" compare="contains">
+      <string>en</string>
+    </test>
+    <test name="family" compare="contains">
+      <string>Noto Serif CJK</string>
+    </test>
+    <edit name="family" mode="prepend" binding="strong">
+      <string>STIX Two Text</string>
+    </edit>
+  </match>
+
+</fontconfig>
