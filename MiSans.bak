@@ -46,6 +46,167 @@
    <string>sans-serif</string>
   </edit>
  </match>
+
+ <!-- No Yahei -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Microsoft YaHei</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>雅黑</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>JhengHei</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Segoe -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Segoe</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Arial -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Arial</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Tahoma -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Tahoma</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Verdana -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Verdana</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Roboto -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Roboto</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Open Sans -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Open Sans</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Inter -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Inter</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Noto Sans CJK -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Noto Sans CJK</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Noto Sans (EN) -->
+ <match target="pattern">
+  <test compare="eq" name="family">
+   <string>Noto Sans</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Helvetica -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Helvetica</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Apple -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>PingFang</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>苹方</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Pro</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Mono</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
  
  <!-- 默认无衬线字体 -->
  <!-- Default sans-serif font -->
@@ -55,6 +216,19 @@
   </test>
   <edit binding="strong" mode="prepend" name="family">
    <string>MiSans VF</string>
+   <string>MiSans TC VF</string>
+   <string>MiSans L3</string>
+   <string>MiSans Latin VF</string>
+   <string>MiSans Arabic VF</string>
+   <string>MiSans MiSans Tibetan VF</string>
+   <string>MiSans Lao VF</string>
+   <string>MiSans Myanmar VF</string>
+   <string>MiSans Khmer VF</string>
+   <string>MiSans Gurmukhi VF</string>
+   <string>MiSans Gujarati VF</string>
+   <string>MiSans Devanagari VF</string>
+   <string>Noto Color Emoji</string>
+   <string>Noto Emoji</string>
   </edit>
  </match>
  
@@ -66,6 +240,22 @@
   </test>
   <edit binding="strong" mode="prepend" name="family">
    <string>Noto Serif CJK SC</string>
+   <string>Noto Serif CJK HK</string>
+   <string>Noto Serif CJK TC</string>
+   <string>Noto Serif CJK JP</string>
+   <string>Noto Serif CJK KR</string>
+   <string>Noto Naskh Arabic</string>
+   <string>Noto Serif Tibetan</string>
+   <string>Noto Serif Hebrew</string>
+   <string>Noto Serif Lao</string>
+   <string>Noto Serif Malayalam</string>
+   <string>Noto Serif Myanmar</string>
+   <string>Noto Serif Khmer</string>
+   <string>Noto Serif Gurmukhi</string>
+   <string>Noto Serif Gujarati</string>
+   <string>Noto Serif Devanagari</string>
+   <string>Noto Color Emoji</string>
+   <string>Noto Emoji</string>
   </edit>
  </match>
  
@@ -77,233 +267,20 @@
   </test>
   <edit binding="strong" mode="prepend" name="family">
    <string>JetBrains Mono</string>
-  </edit>
- </match>
- 
- <!-- Fallback fonts preference order -->
- <alias>
-  <family>sans-serif</family>
-  <prefer>
-   <family>MiSans VF</family>
-   <family>MiSans TC VF</family>
-   <family>MiSans L3</family>
-   <family>MiSans Latin VF</family>
-   <family>MiSans Arabic VF</family>
-   <family>MiSans MiSans Tibetan VF</family>
-   <family>MiSans Lao VF</family>
-   <family>MiSans Myanmar VF</family>
-   <family>MiSans Khmer VF</family>
-   <family>MiSans Gurmukhi VF</family>
-   <family>MiSans Gujarati VF</family>
-   <family>MiSans Devanagari VF</family>
-   <family>Noto Color Emoji</family>
-   <family>Noto Emoji</family>
-  </prefer>
- </alias>
- 
- <alias>
-  <family>serif</family>
-  <prefer>
-   <family>Noto Serif CJK SC</family>
-   <family>Noto Serif CJK TC</family>
-   <family>Noto Serif CJK JP</family>
-   <family>Noto Serif CJK KR</family>
-   <family>Noto Naskh Arabic</family>
-   <family>Noto Serif Tibetan</family>
-   <family>Noto Serif Hebrew</family>
-   <family>Noto Serif Lao</family>
-   <family>Noto Serif Malayalam</family>
-   <family>Noto Serif Myanmar</family>
-   <family>Noto Serif Khmer</family>
-   <family>Noto Serif Gurmukhi</family>
-   <family>Noto Serif Gujarati</family>
-   <family>Noto Serif Devanagari</family>
-   <family>Noto Color Emoji</family>
-   <family>Noto Emoji</family>
-  </prefer>
- </alias>
- 
- <alias>
-  <family>monospace</family>
-  <prefer>
-   <family>JetBrains Mono</family>
-   <family>MiSans VF</family>
-   <family>MiSans TC VF</family>
-   <family>MiSans L3</family>
-   <family>MiSans Latin VF</family>
-   <family>MiSans Arabic VF</family>
-   <family>MiSans MiSans Tibetan VF</family>
-   <family>MiSans Lao VF</family>
-   <family>MiSans Myanmar VF</family>
-   <family>MiSans Khmer VF</family>
-   <family>MiSans Gurmukhi VF</family>
-   <family>MiSans Gujarati VF</family>
-   <family>MiSans Devanagari VF</family>
-   <family>Noto Color Emoji</family>
-   <family>Noto Emoji</family>
-  </prefer>
- </alias>
- 
- <!-- No Yahei -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Microsoft YaHei</string>
-  </test>
-  <edit binding="strong" name="family">
    <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>雅黑</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
-
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>JhengHei</string>
-  </test>
-  <edit binding="strong" name="family">
    <string>MiSans TC VF</string>
-  </edit>
- </match>
- 
- <!-- No Segoe -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Segoe</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- 
- <!-- No Arial -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Arial</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
-
- <!-- No Tahoma -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Tahoma</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- 
- <!-- No Roboto -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Roboto</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
-
- <!-- No Open Sans -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Open Sans</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- 
- <!-- No Inter -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Inter</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- 
- <!-- No Noto Sans CJK -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK SC</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK JP</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK KR</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK HK</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans TC VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK TC</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans TC VF</string>
-  </edit>
- </match>
- 
- <!-- No Apple -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>PingFang</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>苹方</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>SF Pro</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>MiSans VF</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>SF Mono</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>JetBrains Mono</string>
+   <string>MiSans L3</string>
+   <string>MiSans Latin VF</string>
+   <string>MiSans Arabic VF</string>
+   <string>MiSans MiSans Tibetan VF</string>
+   <string>MiSans Lao VF</string>
+   <string>MiSans Myanmar VF</string>
+   <string>MiSans Khmer VF</string>
+   <string>MiSans Gurmukhi VF</string>
+   <string>MiSans Gujarati VF</string>
+   <string>MiSans Devanagari VF</string>
+   <string>Noto Color Emoji</string>
+   <string>Noto Emoji</string>
   </edit>
  </match>
  

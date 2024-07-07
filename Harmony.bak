@@ -46,6 +46,157 @@
    <string>sans-serif</string>
   </edit>
  </match>
+
+ <!-- No Yahei -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Microsoft YaHei</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>雅黑</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>JhengHei</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Segoe -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Segoe</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Arial -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Arial</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Tahoma -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Tahoma</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Verdana -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Verdana</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Roboto -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Roboto</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Open Sans -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Open Sans</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Inter -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Inter</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Noto Sans CJK -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>Noto Sans CJK</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+
+ <!-- No Noto Sans (EN) -->
+ <match target="pattern">
+  <test compare="eq" name="family">
+   <string>Noto Sans</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ 
+ <!-- No Apple -->
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>PingFang</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>苹方</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Pro</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
+ <match target="pattern">
+  <test compare="contains" name="family">
+   <string>SF Mono</string>
+  </test>
+  <edit binding="strong" name="family">
+   <string>sans-serif</string>
+  </edit>
+ </match>
  
  <!-- 默认无衬线字体 -->
  <!-- Default sans-serif font -->
@@ -96,10 +247,11 @@
  <alias>
   <family>serif</family>
   <prefer>
-   <family>Noto Serif CJK SC</family>
-   <family>Noto Serif CJK TC</family>
-   <family>Noto Serif CJK JP</family>
-   <family>Noto Serif CJK KR</family>
+    <family>Noto Serif CJK SC</family>
+    <family>Noto Serif CJK HK</family>
+    <family>Noto Serif CJK TC</family>
+    <family>Noto Serif CJK JP</family>
+    <family>Noto Serif CJK KR</family>
    <family>Noto Naskh Arabic</family>
    <family>Noto Serif Tibetan</family>
    <family>Noto Serif Hebrew</family>
@@ -126,169 +278,6 @@
    <family>Noto Emoji</family>
   </prefer>
  </alias>
- 
- <!-- No Yahei -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Microsoft YaHei</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>雅黑</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
-
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>JhengHei</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans TC</string>
-  </edit>
- </match>
- 
- <!-- No Segoe -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Segoe</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- 
- <!-- No Arial -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Arial</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
-
- <!-- No Tahoma -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Tahoma</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- 
- <!-- No Roboto -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Roboto</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
-
- <!-- No Open Sans -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Open Sans</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- 
- <!-- No Inter -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Inter</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- 
- <!-- No Noto Sans CJK -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK SC</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK JP</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK KR</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK HK</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans TC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>Noto Sans CJK TC</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans TC</string>
-  </edit>
- </match>
- 
- <!-- No Apple -->
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>PingFang</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>苹方</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>SF Pro</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>HarmonyOS Sans SC</string>
-  </edit>
- </match>
- <match target="pattern">
-  <test compare="contains" name="family">
-   <string>SF Mono</string>
-  </test>
-  <edit binding="strong" name="family">
-   <string>JetBrains Mono</string>
-  </edit>
- </match>
  
  <!-- TC -->
  <match target="pattern">
