@@ -1,0 +1,547 @@
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+	
+	<match target="font">
+		<edit mode="assign" name="hinting">
+			<bool>true</bool>
+		</edit>
+	</match>
+	<match target="font">
+		<edit mode="assign" name="hintstyle">
+			<const>hintslight</const>
+		</edit>
+	</match>
+	
+	<match target="font">
+		<edit mode="assign" name="rgba">
+			<const>rgb</const>
+		</edit>
+	</match>
+	
+	<match target="font">
+		<edit mode="assign" name="antialias">
+			<bool>true</bool>
+		</edit>
+	</match>
+	<match target="font">
+		<edit mode="assign" name="lcdfilter">
+			<const>lcddefault</const>
+		</edit>
+	</match>
+	
+	<match target="pattern">
+		<test name="family" qual="any">
+			<string>system-ui</string>
+		</test>
+		<edit binding="strong" mode="prepend" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Yahei -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Microsoft YaHei</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>雅黑</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>JhengHei</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Segoe -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Segoe</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Arial -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Arial</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Tahoma -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Tahoma</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Verdana -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Verdana</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Roboto -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Roboto</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Open Sans -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Open Sans</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Inter -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Inter</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Helvetica -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Helvetica</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Harmony -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Harmony</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Times New Roman -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Times New Roman</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>serif</string>
+		</edit>
+	</match>
+	
+	<!-- No SimSun/SimHei -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>SimSun</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>SimHei</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	
+	<!-- No Apple -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>-apple-system</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>PingFang</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>苹方</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>SF Pro</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>SF Mono</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>monospace</string>
+		</edit>
+	</match>
+	
+	<!-- No Monospaces from windows -->
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Source Code</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>monospace</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="contains" name="family">
+			<string>Lucida</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>monospace</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test compare="eq" name="family">
+			<string>Terminal</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>monospace</string>
+		</edit>
+	</match>
+
+	<!-- Default sans-serif font -->
+	<match target="pattern">
+		<test name="family" qual="any">
+			<string>sans-serif</string>
+		</test>
+		<edit binding="strong" mode="prepend" name="family">
+			<string>Noto Sans</string>
+			<string>Sarasa UI SC</string>
+			<string>Sarasa UI HC</string>
+			<string>Sarasa UI TC</string>
+			<string>Sarasa UI J</string>
+			<string>Sarasa UI K</string>
+			<string>Noto Sans Devanagari</string>
+			<string>Noto Sans Ethiopic</string>
+			<string>Noto Sans Gujarati UI</string>
+			<string>Noto Sans Gurmukhi UI</string>
+			<string>Noto Sans Hanifi Rohningya</string>
+			<string>Noto Sans Hebrew</string>
+			<string>Noto Sans Kannada UI</string>
+			<string>Noto Sans Kayah Li</string>
+			<string>Noto Sans Khmer</string>
+			<string>Noto Sans Lao</string>
+			<string>Noto Sans Lisu</string>
+			<string>Noto Sans Malayalam UI</string>
+			<string>Noto Sans Medefaidrin</string>
+			<string>Noto Sans Meetei Mayek</string>
+			<string>Noto Sans Myanmar</string>
+			<string>Noto Sans Ol Chiki</string>
+			<string>Noto Sans Sinhala UI</string>
+			<string>Noto Sans Sundanese</string>
+			<string>Noto Sans Tai Tham</string>
+			<string>Noto Sans Tamil UI</string>
+			<string>Noto Sans Tangsa</string>
+			<string>Noto Sans Telugu UI</string>
+			<string>Noto Sans Thaana</string>
+			<string>Noto Sans Thai</string>
+			<string>Noto Sans Vithkuqi</string>
+			<string>Noto Sans Symbols</string>
+			<string>Noto Color Emoji</string>
+			<string>Noto Emoji</string>
+		</edit>
+	</match>
+
+	<!-- Default serif fonts -->
+	<match target="pattern">
+		<test name="family" qual="any">
+			<string>serif</string>
+		</test>
+		<edit binding="strong" mode="prepend" name="family">
+			<string>Noto Serif</string>
+			<string>Noto Serif CJK SC</string>
+			<string>Noto Serif CJK HK</string>
+			<string>Noto Serif CJK TC</string>
+			<string>Noto Serif CJK JP</string>
+			<string>Noto Serif CJK KR</string>
+			<string>Noto Serif Devanagari</string>
+			<string>Noto Serif Ethiopic</string>
+			<string>Noto Serif Gujarati</string>
+			<string>Noto Serif Gurmukhi</string>
+			<string>Noto Serif Hebrew</string>
+			<string>Noto Serif Kannada</string>
+			<string>Noto Serif Khmer</string>
+			<string>Noto Serif Lao</string>
+			<string>Noto Serif Malayalam</string>
+			<string>Noto Serif Myanmar</string>
+			<string>Noto Serif Oriya</string>
+			<string>Noto Serif Sinhala</string>
+			<string>Noto Serif Tamil</string>
+			<string>Noto Serif Telugu</string>
+			<string>Noto Serif Thai</string>
+			<string>Noto Serif Tibetan</string>
+			<string>Noto Serif Toto</string>
+			<string>Noto Serif Vithkuqi</string>
+			<string>Noto Serif Yezidi</string>
+			<string>Noto Color Emoji</string>
+			<string>Noto Emoji</string>
+		</edit>
+	</match>
+
+	<!-- Default monospace fonts -->
+	<match target="pattern">
+		<test name="family" qual="any">
+			<string>monospace</string>
+		</test>
+		<edit binding="strong" mode="prepend" name="family">
+			<string>JetBrains Mono</string>
+			<string>Noto Sans</string>
+			<string>Sarasa UI SC</string>
+			<string>Sarasa UI HC</string>
+			<string>Sarasa UI TC</string>
+			<string>Sarasa UI J</string>
+			<string>Sarasa UI K</string>
+			<string>Noto Sans Devanagari</string>
+			<string>Noto Sans Ethiopic</string>
+			<string>Noto Sans Gujarati UI</string>
+			<string>Noto Sans Gurmukhi UI</string>
+			<string>Noto Sans Hanifi Rohningya</string>
+			<string>Noto Sans Hebrew</string>
+			<string>Noto Sans Kannada UI</string>
+			<string>Noto Sans Kayah Li</string>
+			<string>Noto Sans Khmer</string>
+			<string>Noto Sans Lao</string>
+			<string>Noto Sans Lisu</string>
+			<string>Noto Sans Malayalam UI</string>
+			<string>Noto Sans Medefaidrin</string>
+			<string>Noto Sans Meetei Mayek</string>
+			<string>Noto Sans Myanmar</string>
+			<string>Noto Sans Ol Chiki</string>
+			<string>Noto Sans Sinhala UI</string>
+			<string>Noto Sans Sundanese</string>
+			<string>Noto Sans Tai Tham</string>
+			<string>Noto Sans Tamil UI</string>
+			<string>Noto Sans Tangsa</string>
+			<string>Noto Sans Telugu UI</string>
+			<string>Noto Sans Thaana</string>
+			<string>Noto Sans Thai</string>
+			<string>Noto Sans Vithkuqi</string>
+			<string>Noto Sans Symbols</string>
+			<string>Noto Color Emoji</string>
+			<string>Noto Emoji</string>
+		</edit>
+	</match>
+	
+	<!-- TC -->
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI HC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK HK</string>
+		</edit>
+	</match>
+	
+	<!-- HK -->
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant-HK</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI HC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant-HK</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK HK</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-HK</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI HC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-HK</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK HK</string>
+		</edit>
+	</match>
+	
+	<!-- TW -->
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant-TW</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI TC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-Hant-TW</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK TC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-TW</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI TC</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>zh-TW</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK TC</string>
+		</edit>
+	</match>
+	
+	<!-- JP -->
+	<match target="pattern">
+		<test name="lang">
+			<string>ja</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI J</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>ja</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK JP</string>
+		</edit>
+	</match>
+	
+	<!-- KR -->
+	<match target="pattern">
+		<test name="lang">
+			<string>ko</string>
+		</test>
+		<test name="family">
+			<string>Sarasa UI SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Sarasa UI K</string>
+		</edit>
+	</match>
+	<match target="pattern">
+		<test name="lang">
+			<string>ko</string>
+		</test>
+		<test name="family">
+			<string>Noto Serif CJK SC</string>
+		</test>
+		<edit binding="strong" name="family">
+			<string>Noto Serif CJK KR</string>
+		</edit>
+	</match>
+
+	<!-- '/" in EN -->
+	<!-- <match target="pattern"><test compare="contains" name="lang"><string>en</string></test><test compare="contains" name="family"><string>Noto Serif CJK</string></test><edit binding="strong" mode="prepend" name="family"><string>Noto Serif</string></edit></match> -->
+	
+	<dir>~/.fonts</dir>
+	<dir>~/.local/share/fonts</dir>
+	
+</fontconfig>
